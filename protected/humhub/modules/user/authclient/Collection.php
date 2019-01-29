@@ -123,10 +123,6 @@ class Collection extends Component
     {
         $clients = [];
 
-        $clients['password'] = [
-            'class' => 'humhub\modules\user\authclient\Password'
-        ];
-
         if (Yii::$app->getModule('user')->settings->get('auth.ldap.enabled')) {
             $clients['ldap'] = [
                 'class' => 'humhub\modules\user\authclient\ZendLdapClient'
